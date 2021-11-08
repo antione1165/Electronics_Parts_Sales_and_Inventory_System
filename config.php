@@ -63,4 +63,10 @@ $query_builder = TRUE;
 $con = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 //$con=mysqli_connect ("localhost", "root", "wolf") or die ('I cannot connect to the database because: ' . mysql_error());
 //mysqli_select_db ($con,'sampleLoginDB');
+/* Heroku remote server */
+$i++;
+$cfg["Servers"][$i]["host"] = "us-cdbr-east-04.cleardb.net"; //provide hostname
+$cfg["Servers"][$i]["user"] = "b3775ea834ed8a"; //user name for your remote server
+$cfg["Servers"][$i]["password"] = "e9b72db3"; //password
+$cfg["Servers"][$i]["auth_type"] = "config"; // keep it as config
 exit;
